@@ -1,0 +1,1071 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#10131c">
+<meta name="description" content="Weston Group — независимая многопрофильная некоммерческая организация. Технологии, предпринимательство, творчество и развитие.">
+<title>Weston Group — Beyond Boundaries</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --bg: #10131c;
+  --panel: #181d29;
+  --white: #ffffff;
+  --text: #171b26;
+  --muted: #9299aa;
+  --accent: #a5a5ff;
+  --accent2: #7777e8;
+  --light: #f5f6fa;
+  --border: rgba(255,255,255,.1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--bg);
+  color: white;
+  line-height: 1.65;
+}
+
+a { text-decoration: none; color: inherit; }
+button { font-family: inherit; cursor: pointer; }
+
+.container {
+  width: min(1160px, 90%);
+  margin: auto;
+}
+
+/* HEADER */
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  background: rgba(16,19,28,.88);
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav {
+  height: 76px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: Manrope, sans-serif;
+  font-weight: 800;
+  font-size: 19px;
+  letter-spacing: -.7px;
+}
+
+.logo-icon {
+  width: 37px;
+  height: 37px;
+  display: grid;
+  place-items: center;
+  border-radius: 11px;
+  background: linear-gradient(135deg,#a5a5ff,#6666d9);
+  color: #10131c;
+  font-weight: 900;
+  font-size: 21px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.nav-links a {
+  color: #b7bdcb;
+  font-size: 13px;
+  transition: .2s;
+}
+
+.nav-links a:hover { color: white; }
+
+.lang {
+  border: 1px solid var(--border);
+  background: transparent;
+  color: white;
+  padding: 9px 14px;
+  border-radius: 9px;
+}
+
+/* HERO */
+
+.hero {
+  min-height: 720px;
+  padding: 175px 0 110px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero:before {
+  content: "";
+  position: absolute;
+  width: 550px;
+  height: 550px;
+  right: -120px;
+  top: 70px;
+  background: radial-gradient(circle,rgba(113,105,255,.23),transparent 70%);
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.eyebrow:before {
+  content: "";
+  width: 25px;
+  height: 1px;
+  background: var(--accent);
+}
+
+.hero h1 {
+  font-family: Manrope, sans-serif;
+  font-size: clamp(45px,8vw,88px);
+  line-height: 1.08;
+  letter-spacing: -4px;
+  margin-bottom: 25px;
+}
+
+.hero h1 span { color: var(--accent); }
+
+.hero-description {
+  max-width: 570px;
+  color: #aeb5c5;
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 13px;
+  flex-wrap: wrap;
+  margin-top: 36px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 23px;
+  border-radius: 9px;
+  font-size: 13px;
+  font-weight: 700;
+  transition: .25s;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #10131c;
+}
+
+.btn-primary:hover {
+  background: white;
+  transform: translateY(-3px);
+}
+
+.btn-outline {
+  border: 1px solid var(--border);
+  color: white;
+}
+
+.btn-outline:hover {
+  background: rgba(255,255,255,.08);
+}
+
+.hero-bottom {
+  margin-top: 110px;
+  padding-top: 25px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  color: #858d9f;
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+/* COMMON */
+
+section { padding: 105px 0; }
+
+.section-label {
+  color: var(--accent2);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 11px;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.section-title {
+  font-family: Manrope, sans-serif;
+  font-size: clamp(30px,5vw,49px);
+  letter-spacing: -1.8px;
+  line-height: 1.2;
+  max-width: 700px;
+}
+
+.section-sub {
+  color: #858d9f;
+  margin-top: 18px;
+  max-width: 600px;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+/* ABOUT */
+
+.about {
+  background: var(--light);
+  color: var(--text);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.about .section-sub { color: #687080; }
+
+.about-card {
+  background: white;
+  border: 1px solid #e9eaf0;
+  border-radius: 17px;
+  padding: 30px;
+}
+
+.about-card h3 {
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.about-card p {
+  color: #727b8c;
+  font-size: 13px;
+  line-height: 1.9;
+}
+
+.about-card .symbol {
+  font-size: 38px;
+  color: #7979e8;
+  margin-bottom: 20px;
+}
+
+/* PRINCIPLES */
+
+.principles {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 16px;
+  margin-top: 45px;
+}
+
+.principle {
+  border-top: 1px solid #dfe1e8;
+  padding-top: 19px;
+}
+
+.principle strong {
+  font-size: 15px;
+  display: block;
+  margin-bottom: 7px;
+}
+
+.principle p {
+  color: #737c8c;
+  font-size: 12px;
+}
+
+/* DIRECTIONS */
+
+.directions {
+  background: #f5f6fa;
+  color: var(--text);
+}
+
+.direction-grid {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 17px;
+  margin-top: 48px;
+}
+
+.direction-card {
+  background: white;
+  padding: 28px;
+  border: 1px solid #e8eaf0;
+  border-radius: 14px;
+  min-height: 220px;
+  transition: .25s;
+}
+
+.direction-card:hover {
+  transform: translateY(-5px);
+  border-color: #aaaaff;
+}
+
+.direction-icon {
+  width: 43px;
+  height: 43px;
+  display: grid;
+  place-items: center;
+  background: #eeeeff;
+  color: #6666d9;
+  border-radius: 11px;
+  font-size: 21px;
+  margin-bottom: 23px;
+}
+
+.direction-card h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.direction-card p {
+  color: #788091;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+/* MISSION */
+
+.mission {
+  text-align: center;
+  background: #171b29;
+}
+
+.mission .section-title {
+  margin: auto;
+  max-width: 850px;
+}
+
+.mission .section-sub {
+  margin: 20px auto 0;
+}
+
+.mission-mark {
+  font-size: 50px;
+  color: var(--accent);
+  margin-bottom: 22px;
+}
+
+/* APPROACH */
+
+.approach {
+  background: var(--light);
+  color: var(--text);
+}
+
+.approach-list {
+  margin-top: 45px;
+  border-top: 1px solid #dddfe7;
+}
+
+.approach-item {
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  gap: 20px;
+  padding: 24px 0;
+  border-bottom: 1px solid #dddfe7;
+}
+
+.approach-number {
+  color: #7777df;
+  font-size: 17px;
+  font-weight: 800;
+}
+
+.approach-item h3 {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.approach-item p {
+  color: #737b8c;
+  font-size: 13px;
+}
+
+/* PROJECTS */
+
+.projects {
+  background: #10131c;
+}
+
+.project-panel {
+  margin-top: 42px;
+  padding: 42px;
+  border-radius: 17px;
+  background: linear-gradient(120deg,#20263a,#191d2b);
+  border: 1px solid var(--border);
+}
+
+.project-panel h3 {
+  font-size: 23px;
+  margin-bottom: 13px;
+}
+
+.project-panel p {
+  color: #a3aabd;
+  font-size: 14px;
+  max-width: 650px;
+  line-height: 1.9;
+}
+
+/* CONTACTS */
+
+.contacts {
+  background: var(--light);
+  color: var(--text);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  margin-top: 45px;
+}
+
+.contact-card {
+  padding: 30px;
+  background: white;
+  border: 1px solid #e6e8ef;
+  border-radius: 15px;
+}
+
+.contact-card h3 {
+  font-size: 20px;
+  margin-bottom: 7px;
+}
+
+.position {
+  color: #7777df;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.contact-card p {
+  margin-top: 20px;
+  color: #747d8c;
+  font-size: 13px;
+}
+
+.contact-links {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 22px;
+}
+
+.contact-link {
+  border: 1px solid #e2e4ec;
+  padding: 11px 16px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  background: white;
+  color: #252b3b;
+  transition: .2s;
+}
+
+.contact-link:hover {
+  border-color: #8888e8;
+  color: #6969d7;
+}
+
+.contact-note {
+  margin-top: 22px;
+  font-size: 12px;
+  color: #8a91a0;
+}
+
+/* FOOTER */
+
+footer {
+  background: #10131c;
+  padding: 38px 0;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.footer-copy {
+  color: #777f90;
+  font-size: 11px;
+}
+
+.footer-tag {
+  color: var(--accent);
+  font-size: 11px;
+  letter-spacing: 1px;
+}
+
+/* ANIMATION */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: .7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* MOBILE */
+
+@media(max-width:800px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 150px 0 70px;
+  }
+
+  .hero h1 {
+    letter-spacing: -2px;
+  }
+
+  .hero-bottom {
+    margin-top: 75px;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+
+  section { padding: 75px 0; }
+
+  .about-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .direction-grid {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .principles {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .project-panel { padding: 27px; }
+
+  .footer-content {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media(max-width:500px) {
+  .direction-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-description { font-size: 14px; }
+
+  .hero-bottom {
+    font-size: 9px;
+  }
+
+  .about-card { padding: 23px; }
+
+  .approach-item {
+    grid-template-columns: 40px 1fr;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+    <a href="#home" class="logo">
+      <div class="logo-icon">W</div>
+      WESTON GROUP
+    </a>
+
+    <nav class="nav-links">
+      <a href="#about" data-ru="О компании" data-en="About">О компании</a>
+      <a href="#directions" data-ru="Направления" data-en="Directions">Направления</a>
+      <a href="#mission" data-ru="Миссия" data-en="Mission">Миссия</a>
+      <a href="#projects" data-ru="Проекты" data-en="Projects">Проекты</a>
+      <a href="#contacts" data-ru="Контакты" data-en="Contacts">Контакты</a>
+    </nav>
+
+    <button class="lang" id="langBtn" onclick="toggleLang()">EN</button>
+  </div>
+</header>
+
+<main>
+
+<!-- HERO -->
+
+<div class="hero" id="home">
+  <div class="container">
+    <div class="hero-content reveal">
+      <div class="eyebrow"
+        data-ru="Независимая многопрофильная организация"
+        data-en="Independent multidisciplinary organization">
+        Независимая многопрофильная организация
+      </div>
+
+      <h1>WESTON<br><span>GROUP.</span></h1>
+
+      <p class="hero-description"
+        data-ru="Объединяем идеи, компетенции и инициативы. Развиваем проекты на пересечении технологий, предпринимательства, творчества и других направлений."
+        data-en="Bringing together ideas, expertise and initiatives. Developing projects at the intersection of technology, entrepreneurship, creativity and other fields.">
+        Объединяем идеи, компетенции и инициативы. Развиваем проекты на пересечении технологий, предпринимательства, творчества и других направлений.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#about" class="btn btn-primary"
+          data-ru="О нашей организации →"
+          data-en="Discover Weston Group →">О нашей организации →</a>
+
+        <a href="#contacts" class="btn btn-outline"
+          data-ru="Связаться с нами"
+          data-en="Get in touch">Связаться с нами</a>
+      </div>
+    </div>
+
+    <div class="hero-bottom">
+      <span>WESTON GROUP ©</span>
+      <span>INDEPENDENT ORGANIZATION</span>
+      <span>IDEAS. PEOPLE. DEVELOPMENT.</span>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="reveal">
+        <div class="section-label"
+          data-ru="01 / О компании"
+          data-en="01 / About us">01 / О компании</div>
+
+        <h2 class="section-title"
+          data-ru="Больше, чем одно направление."
+          data-en="More than one direction.">
+          Больше, чем одно направление.
+        </h2>
+
+        <p class="section-sub"
+          data-ru="Weston Group — многопрофильная некоммерческая организация, ориентированная на объединение специалистов, развитие инициатив и реализацию проектов в различных сферах деятельности."
+          data-en="Weston Group is a multidisciplinary non-profit organization focused on bringing specialists together, developing initiatives and implementing projects across different fields.">
+          Weston Group — многопрофильная некоммерческая организация, ориентированная на объединение специалистов, развитие инициатив и реализацию проектов в различных сферах деятельности.
+        </p>
+
+        <p class="section-sub"
+          data-ru="Мы рассматриваем сотрудничество, знания и совместную работу как основу развития. Каждое направление дополняет общую концепцию организации."
+          data-en="We see collaboration, knowledge and teamwork as the foundation of development. Each area contributes to the organization's overall vision.">
+          Мы рассматриваем сотрудничество, знания и совместную работу как основу развития. Каждое направление дополняет общую концепцию организации.
+        </p>
+      </div>
+
+      <div class="about-card reveal">
+        <div class="symbol">✳</div>
+        <h3 data-ru="Наша философия"
+          data-en="Our philosophy">Наша философия</h3>
+        <p data-ru="Создавать пространство для идей, в котором люди с разными интересами, знаниями и опытом могут объединяться ради общих целей."
+          data-en="Creating a space for ideas where people with different interests, knowledge and experience can come together to pursue shared goals.">
+          Создавать пространство для идей, в котором люди с разными интересами, знаниями и опытом могут объединяться ради общих целей.
+        </p>
+      </div>
+    </div>
+
+    <div class="principles reveal">
+      <div class="principle">
+        <strong data-ru="Открытость" data-en="Openness">Открытость</strong>
+        <p data-ru="Уважение к новым идеям и взглядам."
+          data-en="Respect for new ideas and perspectives.">Уважение к новым идеям и взглядам.</p>
+      </div>
+      <div class="principle">
+        <strong data-ru="Сотрудничество" data-en="Collaboration">Сотрудничество</strong>
+        <p data-ru="Объединение знаний и возможностей."
+          data-en="Combining knowledge and opportunities.">Объединение знаний и возможностей.</p>
+      </div>
+      <div class="principle">
+        <strong data-ru="Развитие" data-en="Development">Развитие</strong>
+        <p data-ru="Постоянное совершенствование проектов."
+          data-en="Continuous improvement of projects.">Постоянное совершенствование проектов.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIRECTIONS -->
+
+<section class="directions" id="directions">
+  <div class="container">
+    <div class="section-label"
+      data-ru="02 / Направления"
+      data-en="02 / Areas of activity">02 / Направления</div>
+
+    <h2 class="section-title"
+      data-ru="Разные сферы. Общая цель."
+      data-en="Different fields. One vision.">
+      Разные сферы. Общая цель.
+    </h2>
+
+    <p class="section-sub"
+      data-ru="Организация охватывает несколько направлений, формируя многопрофильную структуру."
+      data-en="The organization covers multiple areas, forming a multidisciplinary structure.">
+      Организация охватывает несколько направлений, формируя многопрофильную структуру.
+    </p>
+
+    <div class="direction-grid">
+
+      <div class="direction-card reveal">
+        <div class="direction-icon">⌘</div>
+        <h3>IT & Technology</h3>
+        <p data-ru="Информационные технологии, программирование, цифровые продукты и инновации."
+          data-en="Information technology, programming, digital products and innovation.">
+          Информационные технологии, программирование, цифровые продукты и инновации.
+        </p>
+      </div>
+
+      <div class="direction-card reveal">
+        <div class="direction-icon">↗</div>
+        <h3>Business & Entrepreneurship</h3>
+        <p data-ru="Предпринимательские инициативы, управление проектами и развитие идей."
+          data-en="Entrepreneurial initiatives, project management and idea development.">
+          Предпринимательские инициативы, управление проектами и развитие идей.
+        </p>
+      </div>
+
+      <div class="direction-card reveal">
+        <div class="direction-icon">✳</div>
+        <h3>Creative & Design</h3>
+        <p data-ru="Дизайн, искусство, визуальные коммуникации и творческие проекты."
+          data-en="Design, art, visual communication and creative projects.">
+          Дизайн, искусство, визуальные коммуникации и творческие проекты.
+        </p>
+      </div>
+
+      <div class="direction-card reveal">
+        <div class="direction-icon">◎</div>
+        <h3>Marketing & PR</h3>
+        <p data-ru="Маркетинг, общественные связи, коммуникации и продвижение инициатив."
+          data-en="Marketing, public relations, communication and initiative promotion.">
+          Маркетинг, общественные связи, коммуникации и продвижение инициатив.
+        </p>
+      </div>
+
+      <div class="direction-card reveal">
+        <div class="direction-icon">◇</div>
+        <h3>Sports & Development</h3>
+        <p data-ru="Спортивные инициативы, развитие клубов и сотрудничество в спортивной сфере."
+          data-en="Sports initiatives, club development and cooperation in the sports sector.">
+          Спортивные инициативы, развитие клубов и сотрудничество в спортивной сфере.
+        </p>
+      </div>
+
+      <div class="direction-card reveal">
+        <div class="direction-icon">⌗</div>
+        <h3>Management & Partnerships</h3>
+        <p data-ru="Организационное управление, координация, аналитика и партнёрства."
+          data-en="Organizational management, coordination, analytics and partnerships.">
+          Организационное управление, координация, аналитика и партнёрства.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- MISSION -->
+
+<section class="mission" id="mission">
+  <div class="container reveal">
+    <div class="mission-mark">✳</div>
+    <div class="section-label"
+      data-ru="03 / Наша миссия"
+      data-en="03 / Our mission">03 / Наша миссия</div>
+
+    <h2 class="section-title"
+      data-ru="Создавать возможности. Объединять людей. Развивать идеи."
+      data-en="Creating opportunities. Bringing people together. Developing ideas.">
+      Создавать возможности. Объединять людей. Развивать идеи.
+    </h2>
+
+    <p class="section-sub"
+      data-ru="Weston Group стремится создавать условия для сотрудничества и реализации инициатив, которые способствуют профессиональному, технологическому и общественному развитию."
+      data-en="Weston Group aims to create opportunities for collaboration and initiatives that contribute to professional, technological and social development.">
+      Weston Group стремится создавать условия для сотрудничества и реализации инициатив, которые способствуют профессиональному, технологическому и общественному развитию.
+    </p>
+  </div>
+</section>
+
+<!-- APPROACH -->
+
+<section class="approach">
+  <div class="container">
+    <div class="section-label"
+      data-ru="04 / Наш подход"
+      data-en="04 / Our approach">04 / Наш подход</div>
+
+    <h2 class="section-title"
+      data-ru="Как мы рассматриваем развитие"
+      data-en="How we approach development">
+      Как мы рассматриваем развитие
+    </h2>
+
+    <div class="approach-list">
+
+      <div class="approach-item reveal">
+        <div class="approach-number">01</div>
+        <div>
+          <h3 data-ru="Инициативность" data-en="Initiative">Инициативность</h3>
+          <p data-ru="Поддержка новых идей и предложений, направленных на развитие."
+            data-en="Supporting new ideas and proposals aimed at development.">
+            Поддержка новых идей и предложений, направленных на развитие.
+          </p>
+        </div>
+      </div>
+
+      <div class="approach-item reveal">
+        <div class="approach-number">02</div>
+        <div>
+          <h3 data-ru="Междисциплинарность" data-en="Interdisciplinary approach">Междисциплинарность</h3>
+          <p data-ru="Взаимодействие между разными профессиональными направлениями."
+            data-en="Interaction between different professional fields.">
+            Взаимодействие между разными профессиональными направлениями.
+          </p>
+        </div>
+      </div>
+
+      <div class="approach-item reveal">
+        <div class="approach-number">03</div>
+        <div>
+          <h3 data-ru="Партнёрство" data-en="Partnership">Партнёрство</h3>
+          <p data-ru="Построение взаимовыгодного сотрудничества и профессиональных связей."
+            data-en="Building mutually beneficial cooperation and professional relationships.">
+            Построение взаимовыгодного сотрудничества и профессиональных связей.
+          </p>
+        </div>
+      </div>
+
+      <div class="approach-item reveal">
+        <div class="approach-number">04</div>
+        <div>
+          <h3 data-ru="Ответственность" data-en="Responsibility">Ответственность</h3>
+          <p data-ru="Последовательная работа, прозрачность и уважение к общим целям."
+            data-en="Consistent work, transparency and respect for shared goals.">
+            Последовательная работа, прозрачность и уважение к общим целям.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+
+<section class="projects" id="projects">
+  <div class="container">
+    <div class="section-label"
+      data-ru="05 / Проекты и инициативы"
+      data-en="05 / Projects and initiatives">05 / Проекты и инициативы</div>
+
+    <h2 class="section-title"
+      data-ru="Идеи становятся проектами."
+      data-en="Ideas become projects.">
+      Идеи становятся проектами.
+    </h2>
+
+    <div class="project-panel reveal">
+      <h3 data-ru="Развитие проектной деятельности"
+        data-en="Developing project activities">
+        Развитие проектной деятельности
+      </h3>
+      <p data-ru="Одной из задач Weston Group является формирование и развитие собственных инициатив в различных направлениях. Проектная деятельность может включать технологические разработки, творческие проекты, образовательные инициативы, спортивное сотрудничество и другие формы совместной работы."
+        data-en="One of Weston Group's objectives is to establish and develop its own initiatives across various fields. Project activities may include technology development, creative projects, educational initiatives, sports cooperation and other forms of collaborative work.">
+        Одной из задач Weston Group является формирование и развитие собственных инициатив в различных направлениях. Проектная деятельность может включать технологические разработки, творческие проекты, образовательные инициативы, спортивное сотрудничество и другие формы совместной работы.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTS -->
+
+<section class="contacts" id="contacts">
+  <div class="container">
+    <div class="section-label"
+      data-ru="06 / Контакты"
+      data-en="06 / Contact">06 / Контакты</div>
+
+    <h2 class="section-title"
+      data-ru="Давайте будем на связи."
+      data-en="Let's stay connected.">
+      Давайте будем на связи.
+    </h2>
+
+    <p class="section-sub"
+      data-ru="По вопросам сотрудничества, инициатив и взаимодействия с Weston Group."
+      data-en="For inquiries regarding cooperation, initiatives and interaction with Weston Group.">
+      По вопросам сотрудничества, инициатив и взаимодействия с Weston Group.
+    </p>
+
+    <div class="contact-grid">
+      <div class="contact-card reveal">
+        <div class="section-label">LEADERSHIP</div>
+
+        <h3>Weston Group</h3>
+        <div class="position">FOUNDER & CEO</div>
+
+        <p data-ru="Основатель и генеральный руководитель организации."
+          data-en="Founder and Chief Executive Officer of the organization.">
+          Основатель и генеральный руководитель организации.
+        </p>
+
+        <div class="contact-links">
+          <a class="contact-link" href="https://t.me/Homb1k" target="_blank" rel="noopener noreferrer">
+            Telegram · @Homb1k ↗
+          </a>
+          <button class="contact-link" onclick="copyDiscord()">
+            Discord · @Homb1k
+          </button>
+        </div>
+      </div>
+
+      <div class="contact-card reveal">
+        <div class="section-label">COMMUNICATION</div>
+        <h3 data-ru="Связь с организацией"
+          data-en="Contact the organization">
+          Связь с организацией
+        </h3>
+
+        <p data-ru="Для связи с Weston Group используйте указанный контакт основателя. По вопросам сотрудничества можно написать напрямую."
+          data-en="To contact Weston Group, use the founder's contact information. For cooperation inquiries, feel free to reach out directly.">
+          Для связи с Weston Group используйте указанный контакт основателя. По вопросам сотрудничества можно написать напрямую.
+        </p>
+
+        <div class="contact-links">
+          <a class="contact-link" href="https://t.me/Homb1k" target="_blank" rel="noopener noreferrer">
+            Contact us ↗
+          </a>
+        </div>
+
+        <div class="contact-note"
+          data-ru="Telegram и Discord: @Homb1k"
+          data-en="Telegram and Discord: @Homb1k">
+          Telegram и Discord: @Homb1k
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+
+<footer>
+  <div class="container footer-content">
+    <a href="#home" class="logo">
+      <div class="logo-icon">W</div>
+      WESTON GROUP
+    </a>
+
+    <div class="footer-copy">
+      © <span id="year"></span> Weston Group. All rights reserved.
+    </div>
+
+    <div class="footer-tag">BEYOND BOUNDARIES.</div>
+  </div>
+</footer>
+
+<script>
+let currentLang = "ru";
+
+function toggleLang() {
+  currentLang = currentLang === "ru" ? "en" : "ru";
+
+  document.documentElement.lang = currentLang;
+
+  document.querySelectorAll("[data-ru]").forEach(el => {
+    el.textContent = el.dataset[currentLang];
+  });
+
+  document.getElementById("langBtn").textContent =
+    currentLang === "ru" ? "EN" : "RU";
+}
+
+function copyDiscord() {
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText("@Homb1k")
+      .then(() => alert("Discord username copied: @Homb1k"))
+      .catch(() => alert("Discord: @Homb1k"));
+  } else {
+    alert("Discord username: @Homb1k");
+  }
+}
+
+document.getElementById("year").textContent =
+  new Date().getFullYear();
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("visible");
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12 });
+
+document.querySelectorAll(".reveal").forEach(el => {
+  observer.observe(el);
+});
+</script>
+
+</body>
+</html>
